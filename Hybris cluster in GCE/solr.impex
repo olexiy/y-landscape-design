@@ -1,0 +1,19 @@
+## Disable Solr Server Autostart ##
+solrserver.instances.default.autostart=false
+
+
+#SOLR Config impex
+$serverConfigName=clusterSolrServerConfig
+
+# Create the SOLR Server configuration.
+INSERT_UPDATE SolrServerConfig;name[unique=true];mode(code);embeddedMaster
+;$serverConfigName;standalone;false
+
+# Define each node in the Solr Cluster
+INSERT_UPDATE SolrEndpointUrl;solrServerConfig(name)[unique=true];url[unique=true];master[unique=true,default=false]
+;$serverConfigName;http://10.156.0.2:8983/solr;true
+;$serverConfigName;http://10.156.0.2:8982/solr;false
+
+# Assign the SOLR Server configuration to our Electronics Index.
+INSERT_UPDATE SolrFacetSearchConfig;name[unique=true];solrServerConfig(name)
+;electronicsIndex;$serverConfigName
