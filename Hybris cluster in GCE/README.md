@@ -1,14 +1,14 @@
-## Step by step creation of the small load Hybris test cluster with B2C Accelerator and system monitoring
+# Step by step creation of the small load Hybris test cluster with B2C Accelerator and system monitoring
 
-#Setting the goal
-The outcome of this Step-by-Step TODO is going to be a basic Hybris cluster with to simple, B2C Accelerator based, shops ready for a testing or to be used for Hybris demo.
-The described process is mainly actions steps described in the [Build an SAP Hybris Clustered Landscape](https://www.udemy.com/build-an-sap-hybris-environment/learn/v4/overview) minus Hybris theory and explanations plus my thoughts and tips.
+## Setting the goal
+The outcome of this Step-by-Step TODO is going to be a basic Hybris cluster with the simple, B2C Accelerator based shop, ready for a testing or to be used for Hybris demo.
+The described process is mainly the actions steps described in the [Build an SAP Hybris Clustered Landscape](https://www.udemy.com/build-an-sap-hybris-environment/learn/v4/overview) minus Hybris theory and explanations plus my thoughts and tips.
 A nice Hybris landscape analytics based on the concurrent user count could be found here: [SAP HYBRIS – PLATFORM SIZING](https://www.hybhub.com/sap-hybris-platform-sizing/).
-Our implementation is a simplified medium solution with back- and front-hybris-server, SOLR cluster, and MySQL Database but without Load Balancing, Apache and MySQL Cluster. Deployment recipes for complete solutions from this page could follow later.
-For this course you are going to need SAP Hybris 6.0+ (I am using version 6.6)
+Our implementation is a simplified medium solution with back- and front-end hybris-servers, SOLR cluster, and MySQL Database, but without Load Balancing, Apache and MySQL Cluster. Deployment recipes for complete solutions from this page could follow later.
+For this course you are going to need SAP Hybris 19.05
 
-#Landscape
-+ 2 x Hybris (Fron- and Back-Office)
+## Landscape
++ 2 x Hybris (FrontEnd and BackOffice)
 + 2 x Apache Solr (Master & Slave)
 + 1 x MySQL Database
 
